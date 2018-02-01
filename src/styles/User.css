@@ -1,0 +1,13 @@
+.user-list{
+    list-style: none;
+    padding: 10px;
+}
+.items{
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.container{
+   
+  
+}

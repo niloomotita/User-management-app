@@ -1,0 +1,16 @@
+.input{
+    padding: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    border:1px solid #00897B;
+    width: 20%;
+}
+.submit{
+    padding: 10px;
+    background-color: #4DB6AC;
+    color: white;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: none;
+}
