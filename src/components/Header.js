@@ -30,7 +30,7 @@ class Header extends Component {
  
     return (
       <div className="header-container">
-         <NavLink exact to="/home" className="item store home"><span >Home</span></NavLink>
+         <span className="item store home" >Home</span>
         <ul className={`header ${this.state.headerVisible}`}>
           <NavLink  exact to="/" className="item store">
             <li>Users</li>

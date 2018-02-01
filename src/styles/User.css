@@ -6,8 +6,33 @@
     text-transform: capitalize;
     margin-top: 10px;
     font-size: 20px;
+    padding: 10px;
 }
-.container{
-   
-  
+.user-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.user-wrapper{
+    border: 1px solid #009688;
+    border-radius: 5px;
+    width: 50%;
+    height: 70%;
+}
+.items:nth-child(odd) {
+    background: #B2DFDB;
+}
+li:nth-child(even) {
+    background: #E0F2F1;
+}
+@media screen and (max-width:480px){
+    
+    .user-wrapper{
+        border: 1px solid #009688;
+        width: 90%;
+        height: 70%;
+        
+    }
 }
