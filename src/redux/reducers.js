@@ -13,10 +13,12 @@ function total (state=0,action){
           return state
       }
 } 
-function users (state=[],{type,user}){
+function users (state=[{firstName:"Niloo",lastName:"Motita"}],{type,user}){
     switch (type) {
         case'ADD_USER':
           return [...state,user]
+          case'REMOVE_USER':
+          return state.filter(people => people.lastName!== user.lastName)
         default:
           return state
       }

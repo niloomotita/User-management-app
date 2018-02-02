@@ -10,9 +10,13 @@ function User(props) {
         <ul className="user-list">
           {props.users.map((user, i) => {
             return (
-              <li key={i} className="items">
+                <div className="items">
+                <li key={i} className="user-name" >
                 {user.firstName}  {user.lastName}
               </li>
+              <span className="delete" onClick={()=>props.removeUser(user)}>X</span>
+                </div>
+              
             );
           })}
         </ul>
@@ -25,4 +29,9 @@ const mapStateToProps = state => {
     users: state.users
   };
 };
-export default connect(mapStateToProps)(User);
+const mapDispatchToProps = dispatch => {
+    return {
+      removeUser: user => dispatch({ type: "REMOVE_USER", user })
+    };
+  };
+export default connect(mapStateToProps,mapDispatchToProps)(User);
