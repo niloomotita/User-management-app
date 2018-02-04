@@ -10,9 +10,9 @@ function User(props) {
         <ul className="user-list">
           {props.users.map((user, i) => {
             return (
-                <div className="items">
-                <li key={i} className="user-name" >
-                {user.firstName}  {user.lastName}
+                <div key={i} className="items">
+                <li  className="user-name" >
+                {user.firstName} {user.lastName}
               </li>
               <span className="delete" onClick={()=>props.removeUser(user)}>X</span>
                 </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
+import {  withRouter } from "react-router-dom";
 import "../styles/Adduser.css";
 class AddUser extends Component {
   constructor(props) {

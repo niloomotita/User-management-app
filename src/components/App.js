@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 import "../styles/App.css";
-import { connect } from "react-redux";
-import Numbers from './Numbers'
 import AddUser from './AddUser'
 import User from './User'
 import Header from './Header'

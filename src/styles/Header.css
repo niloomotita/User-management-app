@@ -27,11 +27,10 @@
     color: white;
     flex-basis: 20%;
     flex-grow: 1;
-    text-align: center;
+    text-align: right;
     cursor: pointer;
     font-size: 20px;
     text-decoration: none;
-
 }
 
 .home{
@@ -94,6 +93,7 @@
         text-align: center;
         width: 100%;
         background-color:#00897B;
+        margin-right: 20px;
       }
      
     

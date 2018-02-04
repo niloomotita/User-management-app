@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
 
 class Header extends Component {
