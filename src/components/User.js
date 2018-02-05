@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import "../styles/User.css";
-
+import {removeUser} from '../redux/actions'
 function User(props) {
   return (
     <div className="user-container">
@@ -31,7 +31,7 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-      removeUser: user => dispatch({ type: "REMOVE_USER", user })
+      removeUser: user => dispatch(removeUser(user))
     };
   };
 export default connect(mapStateToProps,mapDispatchToProps)(User);

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {  withRouter } from "react-router-dom";
 import "../styles/Adduser.css";
+import {addUser} from '../redux/actions'
 class AddUser extends Component {
   constructor(props) {
     super(props);
@@ -52,7 +53,7 @@ class AddUser extends Component {
             value={this.state.lastName}
             onChange={e => this.setState({ lastName: e.target.value })}
           />
-          <br />
+          <br/>
           <button type="submit" className="submit">
             Add User
           </button>
@@ -68,7 +69,7 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    addUser: user => dispatch({ type: "ADD_USER", user })
+    addUser: user => dispatch(addUser(user))
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(
