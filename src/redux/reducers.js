@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-
+import {ADD_USER,REMOVE_USER} from '../redux/actions'
 const ADD_ONE = "ADD_ONE";
 const SUB_ONE = "SUB_ONE";
 
@@ -15,10 +15,10 @@ function total (state=0,action){
 } 
 function users (state=[{firstName:"Niloo",lastName:"Motita"}],{type,user}){
     switch (type) {
-        case'ADD_USER':
+        case ADD_USER:
           return [...state,user]
-          case'REMOVE_USER':
-          return state.filter(people => people.lastName!== user.lastName)
+          case REMOVE_USER:
+          return state.filter(people => people.id!== user.id)
         default:
           return state
       }
