@@ -1,7 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
 import "../styles/User.css";
-import {removeUser} from '../redux/actions'
 function User(props) {
   return (
     <div className="user-container">
@@ -10,13 +8,14 @@ function User(props) {
         <ul className="user-list">
           {props.users.map((user, i) => {
             return (
-                <div key={i} className="items">
-                <li  className="user-name" >
-                {user.firstName} {user.lastName}
-              </li>
-              <span className="delete" onClick={()=>props.removeUser(user)}>X</span>
-                </div>
-              
+              <div key={i} className="items">
+                <li className="user-name">
+                  {user.firstName} {user.lastName}
+                </li>
+                <span className="delete" onClick={() => props.removeUser(user)}>
+                  X
+                </span>
+              </div>
             );
           })}
         </ul>
@@ -24,14 +23,5 @@ function User(props) {
     </div>
   );
 }
-const mapStateToProps = state => {
-  return {
-    users: state.users
-  };
-};
-const mapDispatchToProps = dispatch => {
-    return {
-      removeUser: user => dispatch(removeUser(user))
-    };
-  };
-export default connect(mapStateToProps,mapDispatchToProps)(User);
+
+export default User;

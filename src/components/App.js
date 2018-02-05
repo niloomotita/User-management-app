@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 import "../styles/App.css";
-import AddUser from './AddUser'
-import User from './User'
+import RemoveUserContainer from './RemoveUserContainer'
+import AddUserContainer from './AddUserContainer'
 import Header from './Header'
 
 class App extends Component {
@@ -13,19 +13,17 @@ class App extends Component {
           <Route exact path="/" render={() => (
               <div>
                 <Header/>
-                <User/>
+                <RemoveUserContainer/>
               </div>
             )}
           />
           <Route exact path="/adduser" render={() => (
               <div>
                 <Header/>
-                <AddUser/>
+                <AddUserContainer/>
               </div>
             )}
           />
-        
-        
         </div>
       </BrowserRouter>
     );
